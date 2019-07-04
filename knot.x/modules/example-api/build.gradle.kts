@@ -5,8 +5,8 @@ plugins {
 dependencies {
 
     "io.knotx:knotx".let { v ->
-        implementation(platform("$v-dependencies:${Build.KNOTX_VERSION}"))
-        implementation("$v-server-http-api:${Build.KNOTX_VERSION}")
+        implementation(platform("$v-dependencies:${project.property("knotx.version")}"))
+        implementation("$v-server-http-api:${project.property("knotx.version")}")
     }
     "io.vertx:vertx".let { v ->
         implementation("$v-web")

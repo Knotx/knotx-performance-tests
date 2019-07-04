@@ -26,8 +26,8 @@
     </layout>
   </appender>
 
-  <logger name="io.knotx" level="DEBUG"/>
-  <logger name="io.vertx" level="DEBUG"/>
+  <logger name="io.knotx" level="INFO"/>
+  <logger name="io.vertx" level="INFO"/>
   <logger name="com.project.example" level="DEBUG"/>
 
   <root level="INFO">

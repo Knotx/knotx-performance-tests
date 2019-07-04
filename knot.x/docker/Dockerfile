@@ -1,5 +1,4 @@
-#FROM knotx/knotx:$knotx_version
-FROM skejven/knotx:2.0-perf
+FROM knotx/knotx:$knotx_version
 
 LABEL maintainer="Knot.x Project"
 

@@ -16,8 +16,6 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
-val knotxVersion = "2.0.0-SNAPSHOT"
-
 allprojects {
     plugins.withId("java") {
         tasks.withType<JavaCompile>().configureEach {
@@ -40,7 +38,7 @@ allprojects {
             }
 
             dependencies {
-                "testImplementation"(platform("io.knotx:knotx-dependencies:$knotxVersion"))
+                "testImplementation"(platform("io.knotx:knotx-dependencies:${project.property("knotx.version")}"))
                 "testImplementation"("org.junit.jupiter:junit-jupiter-api")
                 "testRuntimeOnly"("org.junit.jupiter:junit-jupiter-engine")
                 "testImplementation"(group = "io.rest-assured", name = "rest-assured", version = "3.3.0")
