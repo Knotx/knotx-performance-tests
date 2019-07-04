@@ -22,3 +22,9 @@ Thumbs.db
 ######################
 .gradle
 !gradle-wrapper.jar
+
+
+# Project specific   #
+######################
+**/reports/*
+**/results/*

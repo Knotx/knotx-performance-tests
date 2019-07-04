@@ -21,12 +21,12 @@ docker run --ulimit nofile=66000:66000 \
 
 Run tests with
 ```
-artillery run <path-to-scenario> -o results.json
+artillery run <path-to-scenario> -o results/test.json
 ```
 
 Create a test report from the results .json with
 ```
-artillery report output.json -o report.html
+artillery report results/test.json -o reports/report.html
 ```
 
 Access Grafana via
