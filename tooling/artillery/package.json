@@ -1,0 +1,8 @@
+{
+  "name": "artillery-package",
+  "version": "1.0.0",
+  "description": "artillery + plugins required to run tests for KnotX",
+  "scripts": {
+  	"preinstall": "npm i -g artillery artillery-plugin-expect artillery-plugin-publish-metrics"
+	}
+}
