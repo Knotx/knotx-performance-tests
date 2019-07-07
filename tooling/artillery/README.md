@@ -16,6 +16,8 @@ docker run --ulimit nofile=66000:66000 \
   -p 3004:8888 \
   -p 8086:8086 \
   -p 8125:8125/udp \
+  -p 2003:2003 \
+  -e INFLUXDB_GRAPHITE_ENABLED=true \
   samuelebistoletti/docker-statsd-influxdb-grafana:latest
  ```
 

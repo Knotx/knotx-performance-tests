@@ -24,6 +24,7 @@ configurations {
 
 dependencies {
     subprojects.forEach { "dist"(project(":${it.name}")) }
+    "dist"("io.knotx:knotx-metrics-sender:2.0.0-SNAPSHOT")
 }
 
 sourceSets.named("test") {

@@ -33,7 +33,7 @@ JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=180
 HAZELCAST_OPTS="-Dhazelcast.max.no.heartbeat.seconds=5"
 
 # You can enable Vert.x metrics by uncommenting this line.
-# METRICS_OPTS="-Dvertx.metrics.options.enabled=true -Dvertx.metrics.options.registryName=knotx-dropwizard-registry -Dvertx.metrics.options.configPath=metrics-options.json"
+METRICS_OPTS="-Dvertx.metrics.options.enabled=true -Dvertx.metrics.options.registryName=knotx-dropwizard-registry -Dvertx.metrics.options.configPath=metrics-options.json"
 
 #################### DO NOT CHANGE BELOW ######################################
 

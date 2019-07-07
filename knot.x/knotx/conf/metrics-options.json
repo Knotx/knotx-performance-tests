@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "registryName": "knotx-dropwizard-registry",
+  "monitoredHttpClientEndpoints": [
+    {
+      "alias": "Web API",
+      "value": "http://webapi.example.com"
+    }
+  ],
+  "monitoredHttpClientUris": [
+    {
+      "alias": "Web API example",
+      "type": "REGEX",
+      "value": ".*/example.*"
+    }
+  ],
+  "monitoredHttpServerUris": [
+    {
+      "alias": "api-v1",
+      "type": "REGEX",
+      "value": ".*/api/v1/.*"
+    }
+  ],
+  "monitoredEventBusHandlers": [
+    {
+      "alias": "Template Engine HBS",
+      "value": "knotx.knot.te.handlebars"
+    }
+  ]
+}
