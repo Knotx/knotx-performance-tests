@@ -1,0 +1,25 @@
+config:
+  plugins:
+    publish-metrics:
+      - type: influxdb-statsd
+        prefix: artillery.get-v2.
+        host: 127.0.0.1
+        port: 8125
+    expect: {}
+  target: 'http://localhost:8092/api/'
+  phases:
+    - duration: 10
+      arrivalRate: 10
+scenarios:
+  - name: "GET for /v2/example"
+    flow:
+    - get:
+        url: "/v2/example"
+        capture:
+          - json: "$.status"
+            as: status
+        expect:
+          - statusCode: 200
+          - equals:
+            - "success"
+            - "{{status}}"
