@@ -9,7 +9,25 @@ config:
   target: 'http://localhost:8092/api/'
   phases:
     - duration: 10
-      arrivalRate: 10
+      arrivalRate: 5
+    - duration: 20
+      arrivalRate: 5
+      rampTo: 15
+    - duration: 30
+      arrivalRate: 15
+    - duration: 20
+      arrivalRate: 30
+    - duration: 30
+      arrivalRate: 15
+    - duration: 20
+      arrivalRate: 30
+    - duration: 10
+      arrivalRate: 15
+    - duration: 20
+      arrivalRate: 15
+      rampTo: 5
+    - duration: 10
+      arrivalRate: 5
 scenarios:
   - name: "GET for /v1/example"
     flow:
