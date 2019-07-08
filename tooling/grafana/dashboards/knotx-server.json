@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 3,
+  "id": null,
   "iteration": 1562316837823,
   "links": [],
   "panels": [
@@ -764,5 +764,5 @@
   "timezone": "",
   "title": "Knot.x Server",
   "uid": "xPoc9qMZz",
-  "version": 6
+  "version": 1
 }

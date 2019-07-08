@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
+  "id": null,
   "iteration": 1562316642360,
   "links": [],
   "panels": [
@@ -1092,5 +1092,5 @@
   "timezone": "",
   "title": "Knot.x Healthcheck",
   "uid": "YTyJr3MZz",
-  "version": 14
+  "version": 1
 }
