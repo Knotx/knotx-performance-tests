@@ -17,3 +17,10 @@ datasources:
       timeInterval: "15s"
     secureJsonData:
       password: grafana
+  - name: InfluxDB-cAdvisor
+    type: influxdb
+    access: proxy
+    database: cadvisor
+    user: root
+    password: root
+    url: http://influxdb:8086
