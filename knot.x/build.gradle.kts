@@ -47,8 +47,7 @@ tasks.named("build") {
     dependsOn("runTest")
 }
 
-apply(from = "https://raw.githubusercontent.com/Knotx/knotx-starter-kit/2.0.0-RC5/gradle/distribution.gradle.kts")
-apply(from = "https://raw.githubusercontent.com/Knotx/knotx-starter-kit/2.0.0-RC5/gradle/javaAndUnitTests.gradle.kts")
-apply(from = "gradle/docker.gradle.kts")
-// apply(from = "https://raw.githubusercontent.com/Knotx/knotx-starter-kit/2.0.0-RC5/gradle/docker.gradle.kts")
+apply(from = "https://raw.githubusercontent.com/Knotx/knotx-starter-kit/master/gradle/distribution.gradle.kts")
+apply(from = "https://raw.githubusercontent.com/Knotx/knotx-starter-kit/master/gradle/javaAndUnitTests.gradle.kts")
+apply(from = "https://raw.githubusercontent.com/Knotx/knotx-starter-kit/master/gradle/docker.gradle.kts")
 

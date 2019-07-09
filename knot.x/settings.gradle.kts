@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-rootProject.name = "knotx-perfromance-target"
+rootProject.name = "knotx-performance-target"
 
 include("example-api")
 include("health-check")

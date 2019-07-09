@@ -9,7 +9,7 @@ Simply run the command
 
 ## How can I run my Docker image?
 ```
-docker run --rm -p8092:8092 --name knotx_test knotx/knotx-perfromance-target
+docker run --rm -p8092:8092 --name knotx_test knotx/knotx-performance-target
 ```
 
 ### Simple endpoint:
