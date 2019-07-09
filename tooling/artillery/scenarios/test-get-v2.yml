@@ -1,4 +1,6 @@
 config:
+  http:
+    pool: 1000
   plugins:
     publish-metrics:
       - type: influxdb-statsd
