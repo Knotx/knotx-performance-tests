@@ -15,7 +15,18 @@ JVM_OPTS="-XX:+UseBiasedLocking -XX:BiasedLockingStartupDelay=0"
 
 #JMX_OPTS=""
 # To enable JMX uncomment the following
-JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=18093 -Dcom.sun.management.jmxremote.rmi.port=18093 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=host.docker.internal"
+JMX_PORT=9010
+HOST="knotx" #"0.0.0.0"
+JMX_OPTS="-Dsun.management.jmxremote.level=FINEST \
+  -Dsun.management.jmxremote.handlers=java.util.logging.ConsoleHandler \
+  -Djava.util.logging.ConsoleHandler.level=FINEST \
+  -Dcom.sun.management.jmxremote.local.only=false \
+  -Dcom.sun.management.jmxremote.ssl=false \
+  -Dcom.sun.management.jmxremote.authenticate=false \
+  -Dcom.sun.management.jmxremote.port=$JMX_PORT \
+  -Dcom.sun.management.jmxremote.rmi.port=$JMX_PORT \
+  -Dcom.sun.management.jmxremote.host=$HOST \
+  -Djava.rmi.server.hostname=$HOST"
 
 # To enable remote debug port, uncomment the following
 # JVM_DEBUG="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=18092"
@@ -30,10 +41,10 @@ JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=180
 # CLUSTER_CONFIG =
 
 # You can specify hazelcast cluster options here. See http://docs.hazelcast.org/docs/3.6/manual/html-single/index.html#system-properties for the available options.
-HAZELCAST_OPTS="-Dhazelcast.max.no.heartbeat.seconds=5"
+# HAZELCAST_OPTS="-Dhazelcast.max.no.heartbeat.seconds=5"
 
 # You can enable Vert.x metrics by uncommenting this line.
-METRICS_OPTS="-Dvertx.metrics.options.enabled=true -Dvertx.metrics.options.registryName=knotx-dropwizard-registry -Dvertx.metrics.options.configPath=metrics-options.json"
+METRICS_OPTS="-Dvertx.metrics.options.enabled=true -Dvertx.metrics.options.registryName=knotx-dropwizard-registry -Dvertx.metrics.options.configPath=metrics-options.json -Dvertx.metrics.options.jmxEnabled=true -Dvertx.metrics.options.jmxDomain=vertx"
 
 #################### DO NOT CHANGE BELOW ######################################
 

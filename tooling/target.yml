@@ -1,0 +1,23 @@
+# To execute this docker-swarm yml file use `docker stack deploy -c target.yml target`
+
+version: '3.7'
+
+networks:
+  private:
+    driver: overlay
+
+services:
+  knotx:
+    image: knotx/knotx-performance-target
+    ports:
+      - "8092:8092"
+      - "9010:9010"
+    networks:
+      - private
+
+  jmxtrans:
+    image: jmxtrans/jmxtrans
+    volumes:
+      - ./jmxtrans:/var/lib/jmxtrans
+    networks:
+      - private

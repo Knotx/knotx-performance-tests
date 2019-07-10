@@ -24,3 +24,10 @@ datasources:
     user: root
     password: root
     url: http://influxdb:8086
+  - name: InfluxDB-jvm
+    type: influxdb
+    access: proxy
+    database: jvm
+    user: root
+    password: root
+    url: http://influxdb:8086
