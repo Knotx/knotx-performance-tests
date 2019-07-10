@@ -6,7 +6,7 @@ servers:
       - outputWriters:
           - "@class": com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory
             url: http://host.docker.internal:8086/
-            database: jvm
+            database: monitoring
             username: admin
             password: admin
         obj: java.lang:type=Memory
@@ -17,7 +17,7 @@ servers:
       - outputWriters:
           - "@class": com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory
             url: http://host.docker.internal:8086/
-            database: jvm
+            database: monitoring
             username: admin
             password: admin
         obj: java.lang:name=CMS Old Gen,type=MemoryPool
@@ -27,7 +27,7 @@ servers:
       - outputWriters:
           - "@class": com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory
             url: http://host.docker.internal:8086/
-            database: jvm
+            database: monitoring
             username: admin
             password: admin
         obj: java.lang:type=GarbageCollector,name=*
@@ -38,7 +38,7 @@ servers:
       - outputWriters:
           - "@class": com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory
             url: http://host.docker.internal:8086/
-            database: jvm
+            database: monitoring
             username: admin
             password: admin
         obj: java.lang:type=MemoryPool,name=*
@@ -48,7 +48,7 @@ servers:
       - outputWriters:
           - "@class": com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory
             url: http://host.docker.internal:8086/
-            database: jvm
+            database: monitoring
             username: admin
             password: admin
         obj: java.lang:type=Threading
@@ -61,7 +61,7 @@ servers:
       - outputWriters:
           - "@class": com.googlecode.jmxtrans.model.output.InfluxDbWriterFactory
             url: http://host.docker.internal:8086/
-            database: jvm
+            database: monitoring
             username: admin
             password: admin
         obj: java.lang:type=OperatingSystem
@@ -77,6 +77,5 @@ servers:
           - SystemCpuLoad
           - ProcessCpuLoad
           - ProcessCpuTime
-          - AvailableProcessors
         resultAlias: os
-    numQueryThreads: 1
+    numQueryThreads: 2

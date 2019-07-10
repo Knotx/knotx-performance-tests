@@ -15,8 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1562593661248,
+  "iteration": 1562765072682,
   "links": [],
   "panels": [
     {
@@ -27,7 +26,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB-cAdvisor",
+      "datasource": "InfluxDB-monitoring",
       "editable": true,
       "error": false,
       "fill": 2,
@@ -188,7 +187,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB-cAdvisor",
+      "datasource": "InfluxDB-monitoring",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -310,7 +309,7 @@
             {
               "key": "container_name",
               "operator": "=~",
-              "value": "/^$knotxContainerName$/"
+              "value": "/.*knotx.*/"
             }
           ]
         }
@@ -359,7 +358,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB-cAdvisor",
+      "datasource": "InfluxDB-monitoring",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -453,7 +452,7 @@
           "measurement": "memory_usage",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT mean(\"value\") FROM \"memory_usage\" WHERE (\"container_name\" =~ /^$knotxContainerName$/) AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "query": "SELECT mean(\"value\") FROM \"memory_usage\" WHERE (\"container_name\" =~ /.*knotx.*/) AND $timeFilter GROUP BY time($__interval), \"container_name\" fill(null)",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
@@ -475,7 +474,7 @@
             {
               "key": "container_name",
               "operator": "=~",
-              "value": "/^$knotxContainerName$/"
+              "value": "/.*knotx.*/"
             }
           ]
         }
@@ -529,7 +528,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB-cAdvisor",
+      "datasource": "InfluxDB-monitoring",
       "editable": true,
       "error": false,
       "fill": 1,
@@ -685,30 +684,7 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": [
-      {
-        "allValue": null,
-        "current": {
-          "text": "knotx_test",
-          "value": "knotx_test"
-        },
-        "hide": 0,
-        "includeAll": false,
-        "label": "Container Name",
-        "multi": false,
-        "name": "knotxContainerName",
-        "options": [
-          {
-            "selected": true,
-            "text": "knotx_test",
-            "value": "knotx_test"
-          }
-        ],
-        "query": "knotx_test",
-        "skipUrlSync": false,
-        "type": "custom"
-      }
-    ]
+    "list": []
   },
   "time": {
     "from": "now-1h",
