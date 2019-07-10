@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 3,
+  "iteration": 1562757965729,
   "links": [],
   "panels": [
     {
@@ -32,7 +32,7 @@
         "y": 0
       },
       "id": 6,
-      "interval": "",
+      "interval": "10s",
       "legend": {
         "avg": false,
         "current": false,
@@ -67,12 +67,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_rps_mean",
+          "measurement": "[[scenarioPrefix]]_rps_mean",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -149,6 +149,7 @@
         "y": 7
       },
       "id": 2,
+      "interval": "10s",
       "legend": {
         "avg": false,
         "current": false,
@@ -183,12 +184,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_latency_min",
+          "measurement": "[[scenarioPrefix]]_latency_min",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -220,12 +221,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_latency_max",
+          "measurement": "[[scenarioPrefix]]_latency_max",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -257,12 +258,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_latency_median",
+          "measurement": "[[scenarioPrefix]]_latency_median",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "E",
@@ -339,6 +340,7 @@
         "y": 7
       },
       "id": 7,
+      "interval": "10s",
       "legend": {
         "avg": false,
         "current": false,
@@ -373,12 +375,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_latency_p95",
+          "measurement": "[[scenarioPrefix]]_latency_p95",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -410,12 +412,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_latency_p99",
+          "measurement": "[[scenarioPrefix]]_latency_p99",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -492,6 +494,7 @@
         "y": 15
       },
       "id": 4,
+      "interval": "10s",
       "legend": {
         "avg": false,
         "current": false,
@@ -535,12 +538,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_response_1xx",
+          "measurement": "[[scenarioPrefix]]_response_1xx",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "A",
@@ -572,12 +575,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_response_2xx",
+          "measurement": "[[scenarioPrefix]]_response_2xx",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "B",
@@ -609,12 +612,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_response_3xx",
+          "measurement": "[[scenarioPrefix]]_response_3xx",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "C",
@@ -646,12 +649,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_response_4xx",
+          "measurement": "[[scenarioPrefix]]_response_4xx",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "D",
@@ -683,12 +686,12 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
           ],
-          "measurement": "artillery_get-v1_response_5xx",
+          "measurement": "[[scenarioPrefix]]_response_5xx",
           "orderByTime": "ASC",
           "policy": "default",
           "refId": "E",
@@ -757,11 +760,41 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "tags": [],
+          "text": "artillery_get-v1",
+          "value": "artillery_get-v1"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "Scenario prefix for queries",
+        "multi": false,
+        "name": "scenarioPrefix",
+        "options": [
+          {
+            "selected": true,
+            "text": "artillery_get-v1",
+            "value": "artillery_get-v1"
+          },
+          {
+            "selected": false,
+            "text": "artillery_get-v2",
+            "value": "artillery_get-v2"
+          }
+        ],
+        "query": "artillery_get-v1, artillery_get-v2",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
   },
   "time": {
-    "from": "now-5m",
-    "to": "now"
+    "from": "2019-07-10T10:29:28.818Z",
+    "to": "2019-07-10T11:17:09.280Z"
   },
   "timepicker": {
     "nowDelay": "",
@@ -790,7 +823,7 @@
     ]
   },
   "timezone": "",
-  "title": "Artillery GET /v1/example",
-  "uid": "Mt-NyKSWz",
-  "version": 13
+  "title": "artillery",
+  "uid": "5Ea500SZz",
+  "version": 1
 }
