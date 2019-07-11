@@ -8,6 +8,8 @@ networks:
 
 services:
   knotx:
+    environment:
+      - TARGET_MOCK_DOMAIN=192.168.36.14
     image: knotx/knotx-performance-target
     ports:
       - "8092:8092"
