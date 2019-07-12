@@ -42,12 +42,7 @@ paths:
           description: At least one procedure has reported a non-healthy stat
         '500':
           description: One procedure has thrown an error or has not reported a status in time
-  /assets/*:
-    get:
-      operationId: assets-get
-      responses:
-        default:
-          description: Return assets as is from the repository
+
   /scenario0/*:
     get:
       operationId: scenario0
