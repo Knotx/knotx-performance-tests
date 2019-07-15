@@ -21,12 +21,14 @@ import org.apache.commons.lang3.StringUtils;
 
 import io.knotx.fragments.handler.api.Action;
 import io.knotx.fragments.handler.api.ActionFactory;
+import io.knotx.fragments.handler.api.Cacheable;
 import io.knotx.fragments.handler.api.domain.FragmentResult;
 import io.reactivex.Single;
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 
+@Cacheable
 public class PaymentsActionFactory implements ActionFactory {
 
   @Override
