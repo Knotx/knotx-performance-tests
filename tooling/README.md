@@ -30,7 +30,13 @@ docker stack deploy -c mocks.yml mocks
 ```
 
 Next, build the Knot.x image first with `./gradlew clean build` from `knot.x` directory
-You need set environment variable TARGET_MOCK_DOMAIN for your host ip, for example:
+and then run from this directory:
+```
+docker stack deploy -c target.yml target
+```
+
+*NOTE*. In case your mocks are deployed on different machine you need set environment variable 
+TARGET_MOCK_DOMAIN for host ip, for example:
 
 ```
 export TARGET_MOCK_DOMAIN=192.168.1.1
