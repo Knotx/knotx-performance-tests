@@ -1,0 +1,26 @@
+# To execute this docker-swarm yml file use `docker stack deploy -c mocks.yml mocks`
+
+version: '3.7'
+
+networks:
+  private:
+    driver: overlay
+
+services:
+  repository:
+    image: httpd:2.4
+    volumes:
+      - "./mocks/content/public_html:/usr/local/apache2/htdocs"
+    ports:
+      - "4503:80"
+    networks:
+      - private
+
+  webapi:
+    image: httpd:2.4
+    volumes:
+      - "./mocks/webapi:/usr/local/apache2/htdocs"
+    ports:
+      - "3080:80"
+    networks:
+      - private

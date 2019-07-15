@@ -8,6 +8,8 @@ networks:
 
 services:
   knotx:
+    environment:
+      - TARGET_MOCK_DOMAIN=${TARGET_MOCK_DOMAIN:-host.docker.internal}
     image: knotx/knotx-performance-target
     ports:
       - "8092:8092"

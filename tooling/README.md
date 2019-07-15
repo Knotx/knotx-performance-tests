@@ -13,6 +13,9 @@ Target stack runs:
 - [cAdvisor](https://github.com/google/cadvisor)
 - [jmxtrans](http://jmxtrans.org)
 
+Mocks stack runs
+- [httpd](https://hub.docker.com/_/httpd)
+
 ### How to run
 Make sure your Docker instance has [swarm created](https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/).
 
@@ -21,7 +24,24 @@ Run monitoring stack from this directory:
 docker stack deploy -c monitoring.yml monitoring
 ```
 
+Run mocks stack from this directory:
+```
+docker stack deploy -c mocks.yml mocks
+```
+
 Next, build the Knot.x image first with `./gradlew clean build` from `knot.x` directory
+and then run from this directory:
+```
+docker stack deploy -c target.yml target
+```
+
+*NOTE*. In case your mocks are deployed on different machine you need set environment variable 
+TARGET_MOCK_DOMAIN for host ip, for example:
+
+```
+export TARGET_MOCK_DOMAIN=192.168.1.1
+```
+
 and then run from this directory:
 ```
 docker stack deploy -c target.yml target
