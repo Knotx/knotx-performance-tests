@@ -57,3 +57,9 @@ paths:
         default:
           description: One snippet and one service
 
+  /scenario2/*:
+    get:
+      operationId: scenario2
+      responses:
+        default:
+          description: One snippet and five services

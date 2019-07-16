@@ -41,5 +41,18 @@ Scenario with template processing. It calls 4 services. First gather information
     
 #### One snippet and one service     
 
+The page is quite small, it contains only one dynamic Knot.x snippet that requires 1 data source integration.
+
  - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario1/simple-1snippet-1service.html
- - User service - http://TARGET_MOCKS_DOMAIN:3080/scenario0/user
+ - Mountains service - http://TARGET_MOCKS_DOMAIN:3080/scenario1/seven-mountains.json
+
+#### simple-1snippet-5services.html
+
+The page is still small, it contains only one dynamic Knot.x snippet but it requires 5 different data source integration.
+
+ - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario2/simple-1snippet-5services.html
+ - Mountains service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/mountains.json
+ - Continents service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/continents.json
+ - Countries service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/countries.json
+ - Names service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/names.json
+ - Dates service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/dates.json
