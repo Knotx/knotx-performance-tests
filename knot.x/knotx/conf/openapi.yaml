@@ -63,3 +63,10 @@ paths:
       responses:
         default:
           description: One snippet and five services
+
+  /scenario3/*:
+    get:
+      operationId: scenario3
+      responses:
+        default:
+          description: Five snippets one service each

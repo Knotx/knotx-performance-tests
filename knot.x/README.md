@@ -46,7 +46,7 @@ The page is quite small, it contains only one dynamic Knot.x snippet that requir
  - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario1/simple-1snippet-1service.html
  - Mountains service - http://TARGET_MOCKS_DOMAIN:3080/scenario1/seven-mountains.json
 
-#### simple-1snippet-5services.html
+#### One snippet and five services
 
 The page is still small, it contains only one dynamic Knot.x snippet but it requires 5 different data source integration.
 
@@ -56,3 +56,16 @@ The page is still small, it contains only one dynamic Knot.x snippet but it requ
  - Countries service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/countries.json
  - Names service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/names.json
  - Dates service - http://TARGET_MOCKS_DOMAIN:3080/scenario2/dates.json
+ 
+
+#### Five snippets one service each
+
+The page is variation of a previous one. It is still small, it contains five dynamic Knot.x snippets and each of those snippets uses separate data source integration.
+
+ - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario3/simple-5snippets.html
+ - Mountains service - http://TARGET_MOCKS_DOMAIN:3080/scenario3/mountains.json
+ - Continents service - http://TARGET_MOCKS_DOMAIN:3080/scenario3/continents.json
+ - Countries service - http://TARGET_MOCKS_DOMAIN:3080/scenario3/countries.json
+ - Names service - http://TARGET_MOCKS_DOMAIN:3080/scenario3/names.json
+ - Dates service - http://TARGET_MOCKS_DOMAIN:3080/scenario3/dates.json
+ 
