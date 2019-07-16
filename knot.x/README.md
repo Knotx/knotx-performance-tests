@@ -75,3 +75,10 @@ The page contains big blocks of content and is heavy. There is no much work for 
 
  - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario4/simple-big-data.html
  - First service - http://TARGET_MOCKS_DOMAIN:3080/scenario4/first.json 
+ 
+#### Heavy template with 100 snippets and one heavy service     
+ 
+ The page contains 100 snippets, each of them uses the same service. However, the service response is heavy. The challenge here is to process (split and then assemble) a big chunk of html code with multiple snippets and additionaly pass the payload of service response (heavy json) to templating engine Knot.
+ 
+  - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario5/100-small-snippets-1-service-wtih-big-json.html
+  - Peoples service - http://TARGET_MOCKS_DOMAIN:3080/scenario5/people-50.json 
