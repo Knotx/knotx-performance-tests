@@ -84,3 +84,10 @@ paths:
       responses:
         default:
           description: Heavy template with 100 snippets and one heavy service
+
+  /scenario6/*:
+    get:
+      operationId: scenario6
+      responses:
+        default:
+          description: Heavy template with one big snippet and one heavy service
