@@ -1,0 +1,6 @@
+{
+  "messner-version": "This is the list of 7 highest mountains of each of the seven continents - Messner version",
+  "messner-mountains": ["Everest - Asia", "Aconcagua - South America", "Denali - North America", "Kilimanjaro - Africa", "Elbrus - Europe", "Puncak Jaya - Australasia (continent)", "Vinson - Antarctica"],
+  "bass-version": "This is the list of 7 highest mountains of each of the seven continents - Bass version",
+  "bass-mountains": ["Everest - Asia", "Aconcagua - South America", "Denali - North America", "Kilimanjaro - Africa", "Elbrus - Europe", "Kosciuszko - Australia",  "Vinson - Antarctica"]
+}

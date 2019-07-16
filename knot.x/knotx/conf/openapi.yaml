@@ -50,3 +50,10 @@ paths:
         default:
           description: Remote repository template processing with http action and te
 
+  /scenario1/*:
+    get:
+      operationId: scenario1
+      responses:
+        default:
+          description: One snippet and one service
+

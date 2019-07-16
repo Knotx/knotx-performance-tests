@@ -38,3 +38,8 @@ Scenario with template processing. It calls 4 services. First gather information
     - credit card - http://TARGET_MOCKS_DOMAIN:3080/scenario0/creditcard/{user._id}/allowed
     - paypal - http://TARGET_MOCKS_DOMAIN:3080/scenario0/paypal/{user._id}/verify
     - payu - http://TARGET_MOCKS_DOMAIN:3080/scenario0/payu/{user._id}/active
+    
+#### One snippet and one service     
+
+ - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario1/simple-1snippet-1service.html
+ - User service - http://TARGET_MOCKS_DOMAIN:3080/scenario0/user
