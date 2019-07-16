@@ -70,3 +70,10 @@ paths:
       responses:
         default:
           description: Five snippets one service each
+
+  /scenario4/*:
+    get:
+      operationId: scenario4
+      responses:
+        default:
+          description: The page contains big blocks of content and is heavy. There is no much work for integration here (only one snippet with single data soruce), however the challenge here is to process (split and then assemble) a big chunk of html code.

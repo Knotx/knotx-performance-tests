@@ -69,3 +69,9 @@ The page is variation of a previous one. It is still small, it contains five dyn
  - Names service - http://TARGET_MOCKS_DOMAIN:3080/scenario3/names.json
  - Dates service - http://TARGET_MOCKS_DOMAIN:3080/scenario3/dates.json
  
+#### Heavy template with one snippet one services     
+
+The page contains big blocks of content and is heavy. There is no much work for integration here (only one snippet with single data soruce), however the challenge here is to process (split and then assemble) a big chunk of html code.
+
+ - Template from http://TARGET_MOCKS_DOMAIN:4503/scenario4/simple-big-data.html
+ - First service - http://TARGET_MOCKS_DOMAIN:3080/scenario4/first.json 
