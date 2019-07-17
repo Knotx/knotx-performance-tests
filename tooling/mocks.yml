@@ -8,18 +8,19 @@ networks:
 
 services:
   repository:
-    image: httpd:2.4
+    image: nginx:1.16.0
     volumes:
-      - "./mocks/content/public_html:/usr/local/apache2/htdocs"
+      - "./mocks/content/public_html:/usr/share/nginx/html:ro"
     ports:
       - "4503:80"
     networks:
       - private
 
   webapi:
-    image: httpd:2.4
+    image: nginx:1.16.0
     volumes:
-      - "./mocks/webapi:/usr/local/apache2/htdocs"
+      - "./mocks/webapi:/usr/share/nginx/html"
+      - "./mocks/config/webapi-nginx.conf:/etc/nginx/nginx.conf:ro"
     ports:
       - "3080:80"
     networks:
