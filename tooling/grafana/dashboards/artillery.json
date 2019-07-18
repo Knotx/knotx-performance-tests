@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "iteration": 1562757965729,
+  "iteration": 1563452840931,
   "links": [],
   "panels": [
     {
@@ -764,8 +764,6 @@
       {
         "allValue": null,
         "current": {
-          "selected": false,
-          "tags": [],
           "text": "artillery_get-v1",
           "value": "artillery_get-v1"
         },
@@ -784,9 +782,49 @@
             "selected": false,
             "text": "artillery_get-v2",
             "value": "artillery_get-v2"
+          },
+          {
+            "selected": false,
+            "text": "artillery_scenario-0",
+            "value": "artillery_scenario-0"
+          },
+          {
+            "selected": false,
+            "text": "artillery_scenario-1",
+            "value": "artillery_scenario-1"
+          },
+          {
+            "selected": false,
+            "text": "artillery_scenario-2",
+            "value": "artillery_scenario-2"
+          },
+          {
+            "selected": false,
+            "text": "artillery_scenario-3",
+            "value": "artillery_scenario-3"
+          },
+          {
+            "selected": false,
+            "text": "artillery_scenario-4",
+            "value": "artillery_scenario-4"
+          },
+          {
+            "selected": false,
+            "text": "artillery_scenario-5",
+            "value": "artillery_scenario-5"
+          },
+          {
+            "selected": false,
+            "text": "artillery_scenario-6",
+            "value": "artillery_scenario-6"
+          },
+          {
+            "selected": false,
+            "text": "artillery_soak",
+            "value": "artillery_soak"
           }
         ],
-        "query": "artillery_get-v1, artillery_get-v2",
+        "query": "artillery_get-v1, artillery_get-v2, artillery_scenario-0, artillery_scenario-1, artillery_scenario-2, artillery_scenario-3, artillery_scenario-4, artillery_scenario-5, artillery_scenario-6, artillery_soak",
         "skipUrlSync": false,
         "type": "custom"
       }

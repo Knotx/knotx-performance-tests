@@ -1,0 +1,20 @@
+config:
+  http:
+    pool: 1000
+  plugins:
+    publish-metrics:
+      - type: influxdb-statsd
+        prefix: artillery.scenario-0.
+        host: 127.0.0.1
+        port: 8125
+    expect: {}
+  target: 'http://localhost:8092/'
+  phases:
+    - duration: 10
+      arrivalRate: 10
+scenarios:
+  - flow:
+    - get:
+        url: "/scenario0/payment.html"
+        expect:
+          - statusCode: 200

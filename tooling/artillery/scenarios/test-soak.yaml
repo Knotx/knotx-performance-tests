@@ -1,0 +1,50 @@
+config:
+  http:
+    pool: 1000
+  plugins:
+    publish-metrics:
+      - type: influxdb-statsd
+        prefix: artillery.soak.
+        host: 127.0.0.1
+        port: 8125
+    expect: {}
+  target: 'http://localhost:8092/'
+  phases:
+    - duration: 100
+      arrivalRate: 10
+scenarios:
+  - name: "simple-1snippet-1service"
+    weight: 40
+    flow:
+      - get:
+          url: "/scenario1/simple-1snippet-1service.html"
+          expect:
+            - statusCode: 200
+  - name: "simple-1snippet-5services"
+    weight: 25
+    flow:
+      - get:
+          url: "/scenario2/simple-1snippet-5services.html"
+          expect:
+            - statusCode: 200
+  - name: "simple-5snippets"
+    weight: 25
+    flow:
+      - get:
+          url: "/scenario3/simple-5snippets.html"
+          expect:
+            - statusCode: 200
+  - name: "simple-big-data"
+    weight: 5
+    flow:
+      - get:
+          url: "/scenario4/simple-big-data.html"
+          expect:
+            - statusCode: 200
+  - name: "1-big-snippet-1-service-with-big-json"
+    weight: 5
+    flow:
+      - get:
+          url: "/scenario6/1-big-snippet-1-service-wtih-big-json.html"
+          expect:
+            - statusCode: 200
